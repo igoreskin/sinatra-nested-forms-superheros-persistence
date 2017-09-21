@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Team</title>
+  </head>
+  <body>
+
+    <h1>Create a Team</h1>
+
+    <form action="/teams" method="POST">
+      <label for="team_name">Team Name: </label>
+      <input type="text" id="team_name" name="team[name]" placeholder="Team Name"><br>
+      <label for="team_motto">Team Motto: </label>
+      <input type="text" id="team_motto" name="team[motto]" placeholder="Team Motto">
+
+      <h2>Hero 1</h2>
+      <label for="hero1_name">Hero's Name: </label>
+      <input type="text" id="hero1_name" name="team[super_heros][][name]" placeholder="Hero's Name"><br>
+      <label for="hero1_power">Hero's Power: </label>
+      <input type="text" id="hero1_power" name="team[super_heros][][power]" placeholder="Hero's Power"><br>
+      <label for="hero1_bio">Hero's Biography: </label>
+      <input type="text" id="hero1_bio" name="team[super_heros][][bio]" placeholder="Hero's Biography"><br>
+
+      <h2>Hero 2</h2>
+      <label for="hero2_name">Hero's Name: </label>
+      <input type="text" id="hero2_name" name="team[super_heros][][name]" placeholder="Hero's Name"><br>
+      <label for="hero2_power">Hero's Power: </label>
+      <input type="text" id="hero2_power" name="team[super_heros][][power]" placeholder="Hero's Power"><br>
+      <label for="hero2_bio">Hero's Biography: </label>
+      <input type="text" id="hero2_bio" name="team[super_heros][][bio]" placeholder="Hero's Biography"><br>
+
+      <h2>Hero 3</h2>
+      <label for="hero3_name">Hero's Name: </label>
+      <input type="text" id="hero3_name" name="team[super_heros][][name]" placeholder="Hero's Name"><br>
+      <label for="hero3_power">Hero's Power: </label>
+      <input type="text" id="hero3_power" name="team[super_heros][][power]" placeholder="Hero's Power"><br>
+      <label for="hero1_bio">Hero's Biography: </label>
+      <input type="text" id="hero3_bio" name="team[super_heros][][bio]" placeholder="Hero's Biography"><br>
+
+      <p><input type="submit" value="Submit"></p>
+
+    </form>
+
+  </body>
+</html>

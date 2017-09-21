@@ -1,6 +1,24 @@
+GIT
+  remote: https://github.com/bmabey/database_cleaner.git
+  revision: f1e71657936ad177e19032b9b5efbda28543d0d0
+  specs:
+    database_cleaner (1.6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (5.0.2)
+      activesupport (= 5.0.2)
+    activerecord (5.0.2)
+      activemodel (= 5.0.2)
+      activesupport (= 5.0.2)
+      arel (~> 7.0)
+    activesupport (5.0.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (7.1.4)
     capybara (2.5.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -8,12 +26,15 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     coderay (1.1.0)
+    concurrent-ruby (1.0.5)
     daemons (1.2.3)
     diff-lcs (1.2.5)
     eventmachine (1.0.8)
+    i18n (0.8.1)
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
+    minitest (5.8.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pry (0.10.3)
@@ -46,12 +67,19 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-activerecord (2.0.13)
+      activerecord (>= 3.2)
+      sinatra (>= 1.0)
     slop (3.6.0)
+    sqlite3 (1.3.13)
     thin (1.6.4)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (~> 1.0)
+    thread_safe (0.3.6)
     tilt (1.4.1)
+    tzinfo (1.2.3)
+      thread_safe (~> 0.1)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -59,7 +87,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   capybara (= 2.5.0)
+  database_cleaner!
   pry (= 0.10.3)
   rack-test (>= 0.5.4)
   rake (= 10.4.2)
@@ -67,7 +97,9 @@ DEPENDENCIES
   rspec (= 3.3.0)
   shotgun (= 0.9)
   sinatra (= 1.4.3)
+  sinatra-activerecord
+  sqlite3
   thin (= 1.6.4)
 
 BUNDLED WITH
-   1.10.6
+   1.14.6
